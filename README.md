@@ -1,6 +1,6 @@
 # Overloaded Burgers Ordering System
 
-A restaurant ordering system built with Java Swing, extending base menu-loading function into a complete GUI application with dynamic filtering, search results, and order processing. Developed for COSC120.
+A restaurant ordering system built with Java Swing, extending base menu-loading function into a complete GUI application with dynamic filtering, search results, and order processing.
 
 ![All views](overloaded_burgers_views.png)
 
@@ -16,21 +16,21 @@ This project takes a basic menu file loader and transforms it into a full orderi
 - Utility classes for image loading and input validation
 - Listener interfaces connecting all components without tight coupling
 
-### Inherited Base Code
-Credit to Dr Andreas Shepley for providing:
+### Base code
+Base code provided by Dr Andreas Shepley for:
 - Basic structure of `MenuSearcher.java`, `Menu.java`, `MenuItem.java`, `DreamMenuItem.java`
 - Basic value enums: `Protein.java`, `Sauce.java`, `Dressing.java`, `Type.java`, `Filter.java` (values and toString only)
 - Burger and salad item images
 - menu.txt
 
-All GUI components, interfaces, validation, and the extensive Filter.java functionality are my additions.
+All GUI components, interfaces, validation, and the extensive Filter.java functionality are new.
 
 ## Key Features
 
 ### Dynamic Filter System
 The filter panel changes based on whether you select Burger or Salad - pick Burger and you get bun and sauce options; pick Salad and you get leafy greens and dressing instead. This is all managed through CardLayout to handle view switching without manual component manipulation.
 
-The views prevents logical inconsistencies. For example, it will prevent and warn the user if they try to select "None" and "I don't mind" for the same filter - because the choice is contradictory. "None" means explicitly "don't show me items with this ingredient" while "I don't mind" means it doesn't matter either way.
+The view prevents logical inconsistencies. For example, it will prevent and warn the user if they try to select "None" and "I don't mind" for the same filter - because the choice is contradictory. "None" means explicitly "don't show me items with this ingredient" while "I don't mind" means it doesn't matter either way.
 
 ### Search and Results
 Search validation happens at multiple layers. The GUI checks all filters have values and that max price exceeds min price. The InputValidators utility ensures prices are parsable floats. If no matches are found, the full menu displays as a fallback - customers shouldn't hit a dead end.
@@ -44,7 +44,7 @@ Users can select multiple items via checkboxes, then proceed to order creation w
 - Customer detail entry with regex validation
 - Customisation text area
 
-The cheese selection going straight to the final order--unlike other filters--was an assessment requirement. To normalise this inconsistency, I added a dynamic explanation in the UI (dependent on explicit cheese selection or 'I don't mind' choice). After submission, everything resets cleanly for the next customer.
+The cheese selection going straight to the final order--unlike other filters--was an external design constraint. To normalise this inconsistency, I added a dynamic explanation in the UI (dependent on explicit cheese selection or 'I don't mind' choice). After submission, everything resets cleanly for the next customer.
 
 ## Technical Implementation
 
@@ -155,4 +155,4 @@ The application starts with a welcome screen. Navigate through filter selection,
 
 ---
 
-*Developed for COSC120, building on base file-loading code to create a complete, working ordering system. The code prioritises clean architecture and user experience, including responsive resizing and comprehensive component decoupling.*
+*Built on base file-loading code to create a complete, working ordering system. The code prioritises clean architecture and user experience, including responsive resizing and comprehensive component decoupling.*
