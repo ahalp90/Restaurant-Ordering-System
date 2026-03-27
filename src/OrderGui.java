@@ -36,17 +36,17 @@ public final class OrderGui implements OrderingSystemListener, ResultsPanelListe
 
     //                              ***CONSTANTS***
     private static final Dimension GUI_PREFERRED_SIZE = new Dimension(1024, 576);
-    private static final String SEARCH_BUTTON_IMG_PATH = "./search-now.png";
-    private static final String WELCOME_BACKGROUND_IMG_PATH = "./welcome-background.png";
-    private static final String SIDE_BANNER_IMG_PATH = "./side_banner.png";
+    private static final String SEARCH_BUTTON_IMG_PATH = "./resources/search-now.png";
+    private static final String WELCOME_BACKGROUND_IMG_PATH = "./resources/welcome-background.png";
+    private static final String SIDE_BANNER_IMG_PATH = "./resources/side_banner.png";
 
     //IMAGES
     private static final BufferedImage FRAME_ICON_IMAGE =
-            ImgAndButtonUtilities.loadBufferedImage("./overloaded_burgers_graphic_small.png");
+            ImgAndButtonUtilities.loadBufferedImage("./resources/overloaded_burgers_graphic_small.png");
     private static final ImageIcon SUCCESS_ICON = new ImageIcon(
-            ImgAndButtonUtilities.loadBufferedImage("./success_icon.png"));
+            ImgAndButtonUtilities.loadBufferedImage("./resources/success_icon.png"));
     private static final ImageIcon FAIL_ICON = new ImageIcon(
-            ImgAndButtonUtilities.loadBufferedImage("./fail_icon.png"));
+            ImgAndButtonUtilities.loadBufferedImage("./resources/fail_icon.png"));
 
 
     /**
@@ -135,7 +135,7 @@ public final class OrderGui implements OrderingSystemListener, ResultsPanelListe
 
         //CREATE THE 'Order Now' BUTTON AND ADD ACTION LISTENER
         JButton orderNow = ImgAndButtonUtilities.makeImgOnlyButtonWithResize(
-                "./order-now-button.png",
+                "./resources/order-now-button.png",
                 new Dimension((int)(GUI_PREFERRED_SIZE.width / WELCOME_CARD_COLS),
                         (int)(GUI_PREFERRED_SIZE.height / WELCOME_CARD_ROWS))
         );

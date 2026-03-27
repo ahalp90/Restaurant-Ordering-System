@@ -32,7 +32,7 @@ public final class MenuItemPanel {
         imageLabel.setPreferredSize(IMG_THUMBNAIL_DIMENSION);
         BufferedImage originalImg =
                 ImgAndButtonUtilities.loadBufferedImage(
-                        "./" + this.menuItem.getMenuItemIdentifier() + ".png"
+                        "./images/" + this.menuItem.getMenuItemIdentifier() + ".png"
                         );
         Image scaledImg = originalImg.getScaledInstance(
                 IMG_THUMBNAIL_DIMENSION.width, IMG_THUMBNAIL_DIMENSION.height, Image.SCALE_FAST);

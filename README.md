@@ -2,7 +2,7 @@
 
 A restaurant ordering system built with Java Swing, extending base menu-loading function into a complete GUI application with dynamic filtering, search results, and order processing.
 
-![All views](overloaded_burgers_views.png)
+![All views](resources/overloaded_burgers_views.png)
 
 ## Overview
 
